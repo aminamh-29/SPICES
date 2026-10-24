@@ -1,0 +1,9 @@
+/* Design tokens */
+:root{
+  --bg:#fff8f1; --card:#ffffff; --fg:#3b1208; --muted:#6b5b53;
+  --border:#eadbcb; --primary:#9a3412; --primary-dark:#7c2a0e; --gold:#a16207;
+  --ring:#9a3412; --radius:6px;
+  --font-head:"Cormorant Garamond",Georgia,serif; --font-body:"DM Sans",system-ui,sans-serif;
+  --s1:8px; --s2:16px; --s3:24px; --s4:40px; --s5:72px; --s6:112px;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}

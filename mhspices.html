@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff8f1">
+  <title>MH Spices – Pure spices from Kerala</title>
+  <meta name="description" content="Pure, hand-picked spices from Kerala. Order on WhatsApp.">
+  <script>document.documentElement.classList.add("js")</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="logo" href="#"><i></i>MH Spices</a>
+    <nav aria-label="Main">
+      <a href="#shop">Shop</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a id="admin-link" href="admin.html" hidden>Admin</a>
+      <button id="account-btn" class="acct-btn" type="button" aria-haspopup="dialog" hidden>Log in</button>
+      <button id="cart-btn" aria-label="Open cart">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l-1 12H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+        <span id="cart-count" aria-live="polite">0</span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div>
+        <p class="eyebrow">Kerala · Small batch</p>
+        <h1>Pure spices, <em>nothing else.</em></h1>
+        <p>Hand-picked and carefully packed so the aroma stays strong. Delivered fresh to your kitchen.</p>
+        <a class="btn" href="#shop">Shop spices</a>
+      </div>
+      <img class="photo hero-img" src="assets/images/hero.jpg" width="736" height="1104" alt="Whole nutmeg, cinnamon sticks and star anise on a wooden board">
+
+    </div>
+
+    <div class="trust reveal">
+      <div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg><span><strong>100% pure</strong>No fillers, colouring or additives</span></div>
+      <div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c4 4 6 7 6 10a6 6 0 0 1-12 0c0-3 2-6 6-10Z"/></svg><span><strong>Packed fresh</strong>Small batches for stronger aroma</span></div>
+      <div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h11v9H4zM15 10h3l2 3v3h-5"/><circle cx="8" cy="17" r="1.5"/><circle cx="17" cy="17" r="1.5"/></svg><span><strong>Delivered to you</strong>Confirmed with you on WhatsApp</span></div>
+    </div>
+
+    <section id="shop">
+      <h2>Shop</h2>
+      <div id="filters" class="filters" role="group" aria-label="Filter by category"></div>
+      <div id="grid" class="grid"></div>
+    </section>
+
+    <section id="cart-section" class="reveal">
+      <p class="kicker"><i></i>Your selection</p>
+      <h2>Your cart</h2>
+      <div class="cart-layout">
+        <div id="cart-section-items"></div>
+        <aside class="cart-box">
+          <p class="kicker small">Summary</p>
+          <div class="total"><span>Total</span><strong id="cs-total">0</strong></div>
+          <button id="cs-checkout" type="button" class="btn-block">Continue to order details</button>
+          <p class="hint">Delivery is confirmed with you on WhatsApp.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="services">
+      <p class="kicker"><i></i>What we offer</p>
+      <h2 class="reveal">Our services</h2>
+      <div class="services">
+        <article class="service reveal">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c4 4 6 7 6 10a6 6 0 0 1-12 0c0-3 2-6 6-10Z"/></svg>
+          <h3>Whole spices</h3>
+          <p>Cardamom, pepper, nutmeg, cloves and more, packed whole so the aroma stays strong.</p>
+        </article>
+        <article class="service reveal" style="--d:60ms">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 18h14M7 18c0-5 2-9 5-9s5 4 5 9"/><path d="M12 9V6"/></svg>
+          <h3>Ground spices</h3>
+          <p>Turmeric, chilli and other powders, ground and packed in small batches.</p>
+        </article>
+        <article class="service reveal" style="--d:120ms">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4V5Z"/></svg>
+          <h3>Order on WhatsApp</h3>
+          <p>Choose your spices here and send the order straight to us on WhatsApp.</p>
+        </article>
+        <article class="service reveal" style="--d:180ms">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h11v9H4zM15 10h3l2 3v3h-5"/><circle cx="8" cy="17" r="1.5"/><circle cx="17" cy="17" r="1.5"/></svg>
+          <h3>Delivery</h3>
+          <p>We confirm the price and delivery with you on WhatsApp, then send it to your door.</p>
+        </article>
+        <article class="service reveal" style="--d:240ms">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8l8-4 8 4-8 4-8-4Z"/><path d="M4 8v8l8 4 8-4V8"/><path d="M12 12v8"/></svg>
+          <h3>Bulk orders</h3>
+          <p>Need larger quantities for a shop, restaurant or event? Message us on WhatsApp for a quote.</p>
+        </article>
+        <article class="service reveal" style="--d:300ms">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10h16v10H4zM3 7h18v3H3z"/><path d="M12 7v13M12 7c-2-4-6-3-5 0M12 7c2-4 6-3 5 0"/></svg>
+          <h3>Gift packs</h3>
+          <p>Spices packed as a gift. Tell us what you'd like on WhatsApp and we'll arrange it.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="narrow reveal">
+      <h2>About</h2>
+      <img class="photo wide-img" src="assets/images/ground-spices.jpg" width="736" height="1313" loading="lazy" alt="Jars of ground spices with fresh chillies and ginger">
+      <p>MH Spices sells whole and ground spices, sourced directly and packed in small batches so the aroma stays strong. No fillers, no colouring, no added anything.</p>
+    </section>
+
+    <section id="contact" class="order-section">
+      <div class="order-info reveal">
+        <p class="kicker"><i></i>Place your order</p>
+        <h2>Ready to <em>order</em> your spices?</h2>
+        <p class="lead">Choose your spices, send us your details, and we confirm everything with you on WhatsApp. A PDF copy of your order is emailed to you.</p>
+
+        <ol class="steps">
+          <li><span>01</span><div><strong>Choose your spices</strong><p>Add what you like from the shop to your cart.</p></div></li>
+          <li><span>02</span><div><strong>Send your details</strong><p>Fill in the form and your order opens in WhatsApp.</p></div></li>
+          <li><span>03</span><div><strong>We confirm</strong><p>We confirm the price and delivery with you on WhatsApp.</p></div></li>
+        </ol>
+
+        <dl class="rows">
+          <div><dt>Name</dt><dd>Haroon M H</dd></div>
+          <div><dt>Phone</dt><dd><a href="tel:+918089957854">+91 80899 57854</a></dd></div>
+          <div><dt>WhatsApp</dt><dd><a id="wa-link" href="#">Message us directly</a></dd></div>
+          <div><dt>Address</dt><dd>Manakandathil (H), Vadakamurry, Thodupuzha East P.O · 685585 · Kerala</dd></div>
+        </dl>
+        <img class="photo order-photo" src="assets/images/spice-tray.jpg" width="736" height="920" loading="lazy" alt="Whole spices in a stone tray with chillies, turmeric and curry leaves">
+      </div>
+
+      <div class="order-form-wrap reveal">
+        <p class="kicker small">Order form</p>
+        <form id="order-form" autocomplete="on">
+          <p class="group"><span>01</span>Contact</p>
+          <div class="two">
+            <div class="field"><label for="f-first">First name</label>
+              <input id="f-first" name="firstName" type="text" autocomplete="given-name" required maxlength="40" placeholder="Jane"></div>
+            <div class="field"><label for="f-last">Last name</label>
+              <input id="f-last" name="lastName" type="text" autocomplete="family-name" required maxlength="40" placeholder="Doe"></div>
+          </div>
+          <div class="two">
+            <div class="field"><label for="f-phone">Phone number</label>
+              <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required maxlength="25" placeholder="+91 98765 43210"></div>
+            <div class="field"><label for="f-email">Email address</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required maxlength="120" placeholder="jane@email.com"></div>
+          </div>
+
+          <p class="group"><span>02</span>Delivery</p>
+          <div class="field"><label for="f-address">Address</label>
+            <textarea id="f-address" name="address" rows="2" autocomplete="street-address" required maxlength="300" placeholder="House name, street, area"></textarea></div>
+          <div class="field"><label for="f-location">Location</label>
+            <input id="f-location" name="location" type="text" autocomplete="address-level2" required maxlength="160" placeholder="Town / district, state, PIN code">
+            <button id="use-location" type="button" class="link-btn">Use my current location</button></div>
+
+          <p class="group"><span>03</span>Your order</p>
+          <div class="summary">
+            <div id="order-summary"></div>
+            <div class="total"><span>Total</span><strong id="co-total">0</strong></div>
+          </div>
+
+          <input class="hp" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button id="checkout" type="submit" class="btn-block">Place order on WhatsApp</button>
+          <p id="order-status" class="status" role="status"></p>
+          <ul class="notes">
+            <li>No payment is taken on this site. We confirm everything on WhatsApp.</li>
+            <li>A PDF copy of your order is emailed to the address above.</li>
+          </ul>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> MH Spices · Thodupuzha, Kerala · <a href="tel:+918089957854">+91 80899 57854</a></footer>
+
+  <div id="overlay"></div>
+  <aside id="cart" role="dialog" aria-modal="true" aria-labelledby="cart-title" aria-hidden="true">
+    <div class="cart-head">
+      <h3 id="cart-title">Your order</h3>
+      <button id="cart-close" aria-label="Close cart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <div id="cart-items"></div>
+    <div class="cart-foot">
+      <div class="total"><span>Total</span><strong id="cart-total">0</strong></div>
+      <button id="to-checkout" type="button" class="btn full">Continue to order details</button>
+    </div>
+  </aside>
+  <dialog id="auth" aria-labelledby="auth-title">
+    <button id="auth-close" class="x" type="button" aria-label="Close"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+
+    <!-- logged out -->
+    <div id="auth-guest">
+      <p class="kicker small">Your account</p>
+      <h3 id="auth-title">Welcome</h3>
+      <div class="tabs" role="tablist">
+        <button type="button" role="tab" id="tab-login" aria-selected="true">Log in</button>
+        <button type="button" role="tab" id="tab-register" aria-selected="false">Create account</button>
+      </div>
+
+      <form id="login-form" autocomplete="on">
+        <div class="field"><label for="l-email">Email address</label>
+          <input id="l-email" name="email" type="email" autocomplete="email" required maxlength="120"></div>
+        <div class="field"><label for="l-pass">Password</label>
+          <input id="l-pass" name="password" type="password" autocomplete="current-password" required maxlength="128"></div>
+        <button type="submit" class="btn-block">Log in</button>
+      </form>
+
+      <form id="register-form" autocomplete="on" hidden>
+        <div class="two">
+          <div class="field"><label for="r-first">First name</label>
+            <input id="r-first" name="firstName" type="text" autocomplete="given-name" required maxlength="40"></div>
+          <div class="field"><label for="r-last">Last name</label>
+            <input id="r-last" name="lastName" type="text" autocomplete="family-name" required maxlength="40"></div>
+        </div>
+        <div class="field"><label for="r-email">Email address</label>
+          <input id="r-email" name="email" type="email" autocomplete="email" required maxlength="120"></div>
+        <div class="field"><label for="r-phone">Phone number</label>
+          <input id="r-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="25"></div>
+        <div class="field"><label for="r-address">Address <span class="opt">(optional, saves time at checkout)</span></label>
+          <input id="r-address" name="address" type="text" autocomplete="street-address" maxlength="300"></div>
+        <div class="field"><label for="r-location">Location <span class="opt">(optional)</span></label>
+          <input id="r-location" name="location" type="text" autocomplete="address-level2" maxlength="160" placeholder="Town / district, state, PIN code"></div>
+        <div class="field"><label for="r-pass">Password <span class="opt">(at least 8 characters)</span></label>
+          <input id="r-pass" name="password" type="password" autocomplete="new-password" required minlength="8" maxlength="128"></div>
+        <button type="submit" class="btn-block">Create account</button>
+      </form>
+      <p id="auth-error" class="status err" role="alert"></p>
+    </div>
+
+    <!-- logged in -->
+    <div id="auth-user" hidden>
+      <p class="kicker small">Your account</p>
+      <h3 id="user-name"></h3>
+      <p id="user-email" class="muted"></p>
+      <p class="group"><span>01</span>My orders</p>
+      <div id="my-orders"></div>
+      <a id="user-admin" class="btn-block as-link" href="admin.html" hidden>Open admin dashboard</a>
+      <button id="logout-btn" type="button" class="link-btn">Log out</button>
+    </div>
+  </dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <!-- order matters: each file uses the ones above it -->
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

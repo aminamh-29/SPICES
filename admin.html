@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>MH Spices – Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin">
+  <header class="top">
+    <a class="logo" href="admin.html"><i></i>MH Spices <span class="tag">Admin</span></a>
+    <nav aria-label="Admin">
+      <a href="mhspices.html">View shop</a>
+      <button id="admin-logout" class="acct-btn" type="button" hidden>Log out</button>
+    </nav>
+  </header>
+
+  <main class="admin-main">
+    <!-- login gate -->
+    <section id="gate" class="gate" hidden>
+      <p class="kicker"><i></i>Private area</p>
+      <h1>Admin login</h1>
+      <p id="gate-note" class="muted"></p>
+      <form id="admin-login" autocomplete="on">
+        <div class="field"><label for="a-email">Email address</label>
+          <input id="a-email" name="email" type="email" autocomplete="email" required maxlength="120"></div>
+        <div class="field"><label for="a-pass">Password</label>
+          <input id="a-pass" name="password" type="password" autocomplete="current-password" required maxlength="128"></div>
+        <button type="submit" class="btn-block">Log in</button>
+        <p id="gate-error" class="status err" role="alert"></p>
+      </form>
+    </section>
+
+    <!-- dashboard -->
+    <section id="dash" hidden>
+      <p class="kicker"><i></i>Dashboard</p>
+      <h1 id="hello">Hello</h1>
+      <div class="tabs" role="tablist">
+        <button type="button" role="tab" data-tab="orders" aria-selected="true">Orders</button>
+        <button type="button" role="tab" data-tab="customers" aria-selected="false">Customers</button>
+        <button type="button" role="tab" data-tab="products" aria-selected="false">Prices &amp; stock</button>
+      </div>
+
+      <div id="panel-orders">
+        <div class="bar">
+          <label for="order-filter" class="sr">Filter orders by status</label>
+          <select id="order-filter"></select>
+          <span id="order-count" class="muted"></span>
+        </div>
+        <div id="orders"></div>
+      </div>
+      <div id="panel-customers" hidden><div id="customers"></div></div>
+      <div id="panel-products" hidden>
+        <p class="muted">Change a price or mark a spice sold out. The shop updates straight away. To add a new spice or change its name, edit <code>js/products.js</code>.</p>
+        <div id="products"></div>
+      </div>
+      <p id="admin-msg" class="status" role="status"></p>
+    </section>
+  </main>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
